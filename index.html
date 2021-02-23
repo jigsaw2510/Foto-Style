@@ -12,12 +12,13 @@
         }
         main {
             font-family: 'Roboto', sans-serif;
+            background-color: #FFF9FB;
         }
 
         .header {
             text-align: center;
-            padding-top: 0;
-            padding-bottom: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
             position: fixed;
             top: 0;
             left: 0;
@@ -26,6 +27,7 @@
             justify-content: center;
             height: 60px;
             background-color: #FFF9FB;
+            margin: 0 !important;
         }
 
         .hero {
@@ -51,6 +53,7 @@
           flex-wrap: wrap;
           justify-content: center;
           align-items: center;
+          margin: 20px;
         }
         @media (max-width: 800px) {
             .flex-container {
@@ -89,12 +92,13 @@
           line-height: 20px;
           justify-content: center;
           align-items: center;
+          background-color: #FFF9FB;
         }
-        .column {
+        .column-2 {
           flex: 50%;
           max-width: 50%;
         }
-        #button {
+        .button {
         	text-decoration: none;
             background-color: #03A9F4;
             color: white !important;
@@ -103,7 +107,7 @@
             font-size: 1.2em;
             font-weight: 400;
         }
-        #button:hover {
+        .button:hover {
             background-color: #3ABEFF;
             color: white;
             text-decoration: none !important;
@@ -113,17 +117,18 @@
         	background-color: #FFF9FB;
         	line-height: 28px;
         	font-size: 1.2em;
+            margin-top: 30px;
         }
         @media (max-width: 800px) {
-          .column {
+          .column-2 {
             flex: 100%;
             max-width: 100%;
           }
           #action {
-          	padding-bottom: 10px;
+          	padding: 20px;
           	height: auto;
           }
-          #column2 {
+          #second-column {
           	margin-top: 15px;
           	margin-bottom: 15px;
           }
@@ -134,6 +139,36 @@
         }
         #action a:hover {
         	text-decoration: underline;
+        }
+        .column-4 {
+            flex: 25%;
+            max-width: 25%;
+        }
+        section img {
+            max-width: 80%;
+        }
+        @media (max-width: 800px) {
+          .column-4 {
+            flex: 50%;
+            max-width: 50%;
+          }
+          h1 {
+            text-align: center;
+          }
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          .column-4 {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+        h1 {
+            background-color: #FFF9FB;
+            color: #6F6F6F;
+            font-weight: 300;
+            padding: 30px;
+
         }
     </style>
 </head>
@@ -153,16 +188,46 @@
         <img src="banner.jpg" id="banner">
     </section>
     <section class="row" id="action">
-    	<div class="column">
+    	<div class="column-2">
     		<p>Servicii de editare foto si produse de cea mai inalta calitate. <br> Pentru a viziona toate produsele click <a href="produse.html">aici</a></p>
     	</div>
-    	<div class="column" id="column2">
-    		<a href="contact.html" id="button">Comanda acum!</a>
+    	<div class="column-2" id="second-column">
+    		<a href="contact.html" class="button">Comanda acum!</a>
     	</div>
     </section>
+    <h1>Produse recomandate</h1>
+    <section class="row clear">
+        <div class="column-4">
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+        </div>
+        <div class="column-4">
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <p>Produs 1 <br> 10 Lei</p>
+        </div>
+    </section>
+    <div class="flex-container">
+    <a href="produse.html" class="button clear">Vezi toate produsele</a>
+    </div>
     <!-- Footer -->
     <footer class="footer clear">
-        &copy Foto Style 2021
+        &copy Foto Style 2021. Toate drepturile rezervate | Servicii de webdesign oferite de catalingavrila.com
     </footer>
     </main>
 </body>
