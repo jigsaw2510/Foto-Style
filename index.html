@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foto Style Servicii Editare Foto si Produse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Foto Foto Servicii Editare Foto si Produse</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style type="text/css">
@@ -14,8 +15,7 @@
             font-family: 'Roboto', sans-serif;
             background-color: #FFF9FB;
         }
-
-        .header {
+        .menu {
             text-align: center;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -29,12 +29,7 @@
             background-color: #FFF9FB;
             margin: 0 !important;
         }
-
-        .hero {
-            padding: 0;
-            margin-top: 42px;
-        } 
-        header a {
+        nav a {
             text-decoration: none;
             color: #03A9F4;
             background-color: #FFF9FB;
@@ -43,7 +38,7 @@
             font-size: 1.5em;
             font-weight: 500;
         }
-        header a:hover {
+        nav a:hover {
             background-color: #03A9F4;
             color: white;
         }
@@ -55,48 +50,27 @@
           align-items: center;
           margin: 20px;
         }
-        @media (max-width: 800px) {
-            .flex-container {
-                flex-direction: column;
-                height: auto;
-                position: relative;
-            }   
-        }
-        @media (max-width: 800px) {
-        	.button {
-        		clear: both;
-        		margin: 0 auto;
-        	}
-        }
-        @media (max-width: 800px) {
-            .hero {
-                margin-top: 0;
-            }
-        }
-        .footer {
-            background: #616161;
-            padding: 15px;
-            text-align: center;
-            color: white;
-
+        .hero {
+            padding: 0;
+            margin-top: 42px;
         }
         .hero img {
             max-width: 100vw;
             display: block;
         }
-        .row {
-          display: flex;
-          flex-direction: row;
-          text-align: center;
-          flex-wrap: wrap;
-          line-height: 20px;
-          justify-content: center;
-          align-items: center;
-          background-color: #FFF9FB;
+        #action {
+            height: 90px;
+            background-color: #FFF9FB;
+            line-height: 28px;
+            font-size: 1.2em;
+            margin-top: 30px;
         }
-        .column-2 {
-          flex: 50%;
-          max-width: 50%;
+        #action a {
+            text-decoration: none;
+            color: #3ABEFF;
+        }
+        #action a:hover {
+            text-decoration: underline;
         }
         .button {
         	text-decoration: none;
@@ -112,33 +86,28 @@
             color: white;
             text-decoration: none !important;
         }
-        #action {
-        	height: 90px;
-        	background-color: #FFF9FB;
-        	line-height: 28px;
-        	font-size: 1.2em;
-            margin-top: 30px;
+        h1 {
+            background-color: #FFF9FB;
+            color: #6F6F6F;
+            font-weight: 300;
+            padding: 30px;
         }
-        @media (max-width: 800px) {
-          .column-2 {
-            flex: 100%;
-            max-width: 100%;
-          }
-          #action {
-          	padding: 20px;
-          	height: auto;
-          }
-          #second-column {
-          	margin-top: 15px;
-          	margin-bottom: 15px;
-          }
+        #recomandate p {
+            margin-bottom: 30px;
         }
-        #action a {
-        	text-decoration: none;
-        	color: #3ABEFF;
+        .row {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          flex-wrap: wrap;
+          line-height: 20px;
+          justify-content: center;
+          align-items: center;
+          background-color: #FFF9FB;
         }
-        #action a:hover {
-        	text-decoration: underline;
+        .column-2 {
+          flex: 50%;
+          max-width: 50%;
         }
         .column-4 {
             flex: 25%;
@@ -146,6 +115,31 @@
         }
         section img {
             max-width: 80%;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #616161;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+                height: auto;
+                position: relative;
+            }   
+        }
+        @media (max-width: 800px) {
+            .button {
+                clear: both;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 800px) {
+            .hero {
+                margin-top: 0;
+            }
         }
         @media (max-width: 800px) {
           .column-4 {
@@ -156,18 +150,25 @@
             text-align: center;
           }
         }
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 800px) {
+          .column-2 {
+            flex: 100%;
+            max-width: 100%;
+          }
+          #action {
+            padding: 20px;
+            height: auto;
+          }
+          #second-column {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+        }
         @media (max-width: 600px) {
           .column-4 {
             flex: 100%;
             max-width: 100%;
           }
-        }
-        h1 {
-            background-color: #FFF9FB;
-            color: #6F6F6F;
-            font-weight: 300;
-            padding: 30px;
         }
     </style>
 </head>
@@ -175,13 +176,13 @@
     <!-- Main Content -->
     <main>
     <!-- Header -->
-    <header class="header flex-container">
+    <nav class="menu flex-container">
         <a href="index.html">Home</a>
         <a href="produse.html">Produse</a>
         <a href="">Servicii</a>
         <a href="">Despre noi</a>
-        <a href="">Contact</a>
-    </header>
+        <a href="contact.html">Contact</a>
+    </nav>
     <!-- Hero -->
     <section class="hero">
         <img src="banner.jpg" id="banner">
@@ -195,7 +196,7 @@
     	</div>
     </section>
     <h1>Produse recomandate</h1>
-    <section class="row clear">
+    <section class="row clear" id="recomandate">
         <div class="column-4">
             <img src="https://www.w3schools.com/w3images/paris.jpg">
             <p>Produs 1 <br> 10 Lei</p>
@@ -231,6 +232,3 @@
     </main>
 </body>
 </html>
-
-
-

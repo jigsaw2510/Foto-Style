@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Produsele noastre</title>
@@ -17,8 +18,7 @@
             background-color: #FFF9FB;
             font-family: 'Roboto', sans-serif;
         }
-
-        .header {
+        .menu {
             text-align: center;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -32,7 +32,7 @@
             background-color: #FFF9FB;
             margin: 0 !important;
         }
-        header a {
+        nav a {
             text-decoration: none;
             color: #03A9F4;
             background-color: #FFF9FB;
@@ -41,7 +41,7 @@
             font-size: 1.5em;
             font-weight: 500;
         }
-        header a:hover {
+        nav a:hover {
             background-color: #03A9F4;
             color: white;
         }
@@ -112,9 +112,13 @@
         }
         img {
             max-width: 80%;
+            margin-bottom: 10px;
         }
         img, p {
             padding: 10px;
+        }
+        p {
+            margin-bottom: 30px;
         }
         #description {
             margin-top: 100px;
@@ -128,13 +132,13 @@
     <!-- Main Content -->
     <main>
     <!-- Header -->
-    <header class="header flex-container">
+    <nav class="menu flex-container">
         <a href="index.html">Home</a>
         <a href="produse.html">Produse</a>
         <a href="">Servicii</a>
         <a href="">Despre noi</a>
-        <a href="">Contact</a>
-    </header>
+        <a href="contact.html">Contact</a>
+    </nav>
     <section class="flex-container hero" id="description">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     </section>
