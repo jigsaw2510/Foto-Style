@@ -57,21 +57,23 @@
           align-items: center;
           margin: 20px;
         }
-
-        .footer {
-            background: #616161;
-            padding: 15px;
-            text-align: center;
-            color: white;
-            margin-top: 200px;
+        .row {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          flex-wrap: wrap;
+          line-height: 20px;
+          justify-content: center;
+          align-items: center;
+          background-color: #FFF9FB;
         }
+        .column-2 {
+          flex: 50%;
+          max-width: 50%;
+        }
+        
         section {
         	margin-top: 200px;
-        	display: flex;
-        	flex-direction: column;
-          	flex-wrap: wrap;
-          	justify-content: center;
-          	align-items: center;
         }
         section h3 {
         	padding: 10px;
@@ -80,6 +82,13 @@
         }
         section p {
         	margin-bottom: 10px;
+        }
+        .footer {
+            background: #616161;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            margin-top: 200px;
         }
         @media (max-width: 800px) {
             .flex-container {
@@ -91,6 +100,11 @@
             	margin-top: 100px;
             }
         }
+        @media (max-width: 800px) {
+          .column-2 {
+            flex: 100%;
+            max-width: 100%;
+          }
 	</style>
 </head>
 <body>
@@ -104,17 +118,21 @@
         <a href="">Despre noi</a>
         <a href="contact.html" class="selected">Contact</a>
     </nav>
-    <section>
-    	<h3>Adresa:</h3>
-    	<p>Str. Marului 2, Draganesti-Olt</p>
-    	<h3>Comenzi la nr. telefon:</h3>
-    	<p>0766591635</p>
-    	<h3>Comenzi pe e-mail:</h3>
-    	<p>gavrila_stefan_catalin@yahoo.com</p>
-    	<h3>Program:</h3>
-    	<p>Luni - Vineri : 9:00 - 19:00</p>
-    	<p>Sambata : 9:00 - 14:00</p>
-    	<p>Duminica : Inchis</p>
+    <section class="row">
+    	<div class="column-2">
+    		<h3>Comenzi la nr. telefon:</h3>
+    		<p>0766591635</p>
+    		<h3>Comenzi pe e-mail:</h3>
+    		<p>gavrila_stefan_catalin@yahoo.com</p>
+    	</div>
+    	<div class="column-2">
+    		<h3>Adresa:</h3>
+    		<p>Str. Marului 2, Draganesti-Olt</p>
+	    	<h3>Program:</h3>
+	    	<p>Luni - Vineri : 9:00 - 19:00</p>
+	    	<p>Sambata : 9:00 - 14:00</p>
+	    	<p>Duminica : Inchis</p>
+    	</div>
     </section>
     <!-- Footer -->
     <footer class="footer clear">
