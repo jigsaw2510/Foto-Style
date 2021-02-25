@@ -61,6 +61,8 @@
         .hero img {
             max-width: 100vw;
             display: block;
+            border: none !important;
+            padding: 0 !important;
         }
         #action {
             height: 90px;
@@ -119,7 +121,14 @@
         }
         section img {
             max-width: 80%;
-            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #81D4FA;
+        }
+        section img:hover {
+            background-color: #81D4FA;
+        }
+        section img, p {
+            padding: 10px;
         }
         .footer {
             background: #616161;
@@ -202,7 +211,7 @@
     <h1>Produse recomandate</h1>
     <section class="row clear" id="recomandate">
         <div class="column-4">
-            <img src="https://www.w3schools.com/w3images/paris.jpg">
+            <img src="https://www.w3schools.com/w3images/paris.jpg" id="img1">
             <p>Produs 1 <br> 10 Lei</p>
             <img src="https://www.w3schools.com/w3images/paris.jpg">
             <p>Produs 1 <br> 10 Lei</p>
@@ -234,5 +243,8 @@
         &copy Foto Foto 2021. Toate drepturile rezervate | Servicii de webdesign oferite de catalingavrila.com
     </footer>
     </main>
+    <script type="text/javascript">
+        
+    </script>
 </body>
 </html>
