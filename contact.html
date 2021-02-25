@@ -11,6 +11,9 @@
             margin: 0;
             padding: 0;
         }
+        body {
+        	background-color: #FFF9FB;
+        }
         main {
             font-family: 'Roboto', sans-serif;
             background-color: #FFF9FB;
@@ -42,6 +45,10 @@
             background-color: #03A9F4;
             color: white;
         }
+        .selected:hover {
+            color: #616161;
+            background-color: #FFF9FB;
+        }
         .flex-container {
           display: flex;
           flex-direction: row;
@@ -58,6 +65,32 @@
             color: white;
             margin-top: 200px;
         }
+        section {
+        	margin-top: 200px;
+        	display: flex;
+        	flex-direction: column;
+          	flex-wrap: wrap;
+          	justify-content: center;
+          	align-items: center;
+        }
+        section h3 {
+        	padding: 10px;
+        	color: #03A9F4;
+        	margin-top: 20px;
+        }
+        section p {
+        	margin-bottom: 10px;
+        }
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+                height: auto;
+                position: relative;
+            }
+            section {
+            	margin-top: 100px;
+            }
+        }
 	</style>
 </head>
 <body>
@@ -69,9 +102,20 @@
         <a href="produse.html">Produse</a>
         <a href="">Servicii</a>
         <a href="">Despre noi</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="selected">Contact</a>
     </nav>
-    <p>asdasd</p>
+    <section>
+    	<h3>Adresa:</h3>
+    	<p>Str. Marului 2, Draganesti-Olt</p>
+    	<h3>Comenzi la nr. telefon:</h3>
+    	<p>0766591635</p>
+    	<h3>Comenzi pe e-mail:</h3>
+    	<p>gavrila_stefan_catalin@yahoo.com</p>
+    	<h3>Program:</h3>
+    	<p>Luni - Vineri : 9:00 - 19:00</p>
+    	<p>Sambata : 9:00 - 14:00</p>
+    	<p>Duminica : Inchis</p>
+    </section>
     <!-- Footer -->
     <footer class="footer clear">
         &copy Foto Foto 2021. Toate drepturile rezervate | Servicii de webdesign oferite de catalingavrila.com
