@@ -83,9 +83,12 @@
             background-color: #03A9F4;
             color: white !important;
             padding: 7px 12px;
+            margin-top: 50px;
             border-radius: 6px;
             font-size: 1.2em;
             font-weight: 400;
+            position: relative;
+            top: 50%;
         }
         .button:hover {
             background-color: #3ABEFF;
@@ -115,6 +118,7 @@
         .column-2 {
           flex: 50%;
           max-width: 50%;
+          height: 100%;
         }
         .column-4 {
             flex: 25%;
