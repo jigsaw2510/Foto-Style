@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Foto Foto Servicii Editare Foto si Produse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<style type="text/css">
@@ -20,7 +21,6 @@
 
           /* Full height */
           height: 100%;
-          overflow: hidden;
 
           /* Center and scale the image nicely */
           background-position: center;
@@ -31,47 +31,54 @@
             font-family: 'Roboto', sans-serif;
         }
         h1 {
-            font-weight: 300;
-            padding: 30px;
-            text-align: center;
+            font-weight: bold;
+            padding: 10% 5%;
+            text-align: left;
+            font-size: 0.8rem;
             letter-spacing: 0.8px;
             line-height: 25px;
-            width: 50%;
+            width: 70%;
             margin: 0 auto;
             }
-        .menu {
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            align-items: center;
-            justify-content: center;
-            height: 60px;
+        .topnav {
             background-color: #FFF9FB;
-            margin: 0 !important;
+            overflow: hidden;
+            padding: 10px;
         }
-        nav a {
-            text-decoration: none;
-            color: #03A9F4;
-            background-color: #FFF9FB;
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
             padding: 5px 10px;
             border-radius: 10px;
             font-size: 1.5em;
             font-weight: 500;
+          float: left;
+          display: block;
+          text-decoration: none;
+            color: #03A9F4;
+            background-color: #FFF9FB;
+          text-align: center;
         }
-        nav a:hover {
-            background-color: #03A9F4;
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+          background-color: #03A9F4;
             color: white;
         }
-        .selected {
-            color: #2378a0
+
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+          color: #2378a0
         }
-        .selected:hover {
+
+        .topnav a.active:hover {
             color: #616161;
             background-color: #FFF9FB;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+          display: none;
         }
         .flex-container {
           display: flex;
@@ -125,38 +132,88 @@
             }
         }
         @media (max-width: 800px) {
-          .column-2 {
-            flex: 100%;
-            max-width: 100%;
+          h1 {
+            font-weight: bold;
+            padding: 10% 5%;
+            text-align: left;
+            font-size: 0.8em;
+            letter-spacing: 0.8px;
+            width: 85%;
+            margin: 0 auto;
           }
+
+        }
+          /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+          .topnav a {
+            background-color: #DDDDDD;
+            margin: 5px;
+          }
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        @media screen and (max-width: 600px) {
+            .topnav {
+                position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            }
+            h1 {
+                margin-top: 30px;
+            }
+          .topnav.responsive {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            }
+          .topnav.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+        }
 	</style>
 </head>
 <body class="bg">
     <main class="flex-container-column">
     <!-- Header -->
-    <nav class="menu flex-container">
+    <div class="topnav" id="myTopnav">
         <a href="index.html">Home</a>
         <a href="produse.html">Produse</a>
         <a href="servicii.html">Servicii</a>
-        <a href="despre.html" class="selected">Despre</a>
+        <a href="despre.html" class="active">Despre</a>
         <a href="contact.html">Contact</a>
-    </nav>
-    <section class="row">
-        <div class="column-4">
-            <h1>
-                Hei! Sunt Marian, un tip care se joacă cu aparatul foto și camera video de vreo 20 de ani. Am trecut prin tot felul de evenimente și acum sunt aici să surprind povestea ta în stilul meu.
-
-                Mă pricep să prind vibe-ul fiecărui moment și să-l transform în ceva cu adevărat special. Îmi place să fac poze și clipuri video care să te facă să simți din nou acele emoții.
-
-                Și nu doar atât, ci sunt și destul de bun la editare. Îmi place să adaug puțină magie în fiecare poză și să fac totul să arate exact cum îți dorești.
-
-                Nu sunt doar un tip cu aparatul foto, ci sunt alături de tine să facem ca fiecare moment să conteze. Abia aștept să colaborăm și să facem ca fiecare eveniment să fie memorabil!
-            </h1>
-        </div>
-    </section>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <h1>   
+            Bun venit! Sunt Marian, un fotograf și videograf profesionist cu o bogată experiență de peste 20 de ani în acest domeniu fascinant. Cu pasiunea mea pentru capturarea momentelor speciale și talentul în editarea foto-video, am oferit servicii personalizate și de calitate clienților mei la diverse evenimente. <br>
+            Serviciile mele nu se rezumă doar la capturarea unor cadre perfecte; aduc și o atenție deosebită procesului de editare, asigurându-mă că fiecare imagine și clip video reflectă autenticitatea și frumusețea evenimentului sau subiectului. Îmi place să lucrez îndeaproape cu clienții pentru a realiza produse foto-video care să depășească așteptările și să rămână amintiri de preț. <br>
+            Cu fiecare proiect, mă angajez să ofer o experiență profesionistă, punând la dispoziție nu doar servicii, ci și o viziune artistică și dedicare pentru fiecare detaliu. Abia aștept să colaborăm și să transformăm împreună momentele importante în amintiri durabile.
+    </h1>
     <footer class="footer">
-        &copy CIUBUC FOTO & VIDEO 2024. Toate drepturile rezervate | Servicii de webdesign oferite de catalingavrila.com
+        &copy 2024 CIUBUC FOTO & VIDEO. Toate drepturile rezervate.
     </footer>
     </main>
 </body>
+    <script src="script.js">
+        
+    </script>
 </html>
