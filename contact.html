@@ -13,7 +13,7 @@
             padding: 0;
         }
         body, html {
-          height: 100%;
+          min-height: 100%;
         }
         .bg {
           /* The image used */
@@ -21,7 +21,6 @@
 
           /* Full height */
           height: 100%;
-          overflow: hidden;
 
           /* Center and scale the image nicely */
           background-position: center;
@@ -88,29 +87,40 @@
           justify-content: center;
           align-items: center;
         }
-        .column-2 {
-          flex: 50%;
-          max-width: 50%;
+        .column {
+          display: flex;
+          padding: 100px 30px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          height: 100%;
         }
-        
-        section {
-            margin-top: 200px;
-        }
-        section h3 {
+        .column h3 {
             padding: 10px;
+            width: auto;
             color: #03A9F4;
-            margin-top: 20px;
+            margin-top: 30px;
         }
-        section p {
-            margin-bottom: 10px;
-        }
-        .footer {
+        .column p {
             text-align: center;
+        }
+        .footer-fixed {
+            background: #616161;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
             position : absolute;
+            padding: 10px 0;
             bottom : 0;
-            height : 40px;
-            margin-top : 40px;
             width: 100%;
+        }
+        .footer-relative {
+            background: #616161;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
         }
         @media (max-width: 800px) {
             .flex-container {
@@ -122,11 +132,6 @@
                 margin-top: 100px;
             }
         }
-        @media (max-width: 800px) {
-          .column-2 {
-            flex: 100%;
-            max-width: 100%;
-          }
 
         /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
         @media screen and (max-width: 600px) {
@@ -135,15 +140,39 @@
             float: right;
             display: block;
           }
+          .topnav a {
+            background-color: #DDDDDD;
+            margin: 5px;
+          }
         }
 
         /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
         @media screen and (max-width: 600px) {
-          .topnav.responsive {position: relative;}
+            .topnav {
+                position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            }
+            h1 {
+                margin-top: 30px;
+            }
+          .topnav.responsive {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            }
           .topnav.responsive a.icon {
             position: absolute;
             right: 0;
-            top: 10px;
+            top: 0;
           }
           .topnav.responsive a {
             float: none;
@@ -154,7 +183,7 @@
     </style>
 </head>
 <body class="bg">
-    <main class="flex-container-column">
+    <main>
     <!-- Header -->
     <div class="topnav" id="myTopnav">
         <a href="index.html">Home</a>
@@ -166,17 +195,15 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <section class="row">
-        <div class="column-4">
-            <h3>Comenzi la nr. telefon:</h3>
-            <p style="font-weight: bold;">0763350143</p>
-            <h3>Comenzi pe e-mail:</h3>
-            <p style="font-weight: bold;">ciubucmarian01@gmail.com</p>
-            <h3>Adresa:</h3>
-            <p style="font-weight: bold;">Str. Salcamilor, nr. 127, Com. Maruntei, Jud. Olt</p>
-        </div>
-    </section>
-    <footer class="footer">
+    <div class="column">
+        <h3>Comenzi la nr. telefon:</h3>
+        <p style="font-weight: bold;">0763350143</p>
+        <h3>Comenzi pe e-mail:</h3>
+        <p style="font-weight: bold;">ciubucmarian01@gmail.com</p>
+        <h3>Adresa:</h3>
+        <p style="font-weight: bold;">Str. Salcamilor, nr. 127, Com. Maruntei, Jud. Olt</p>
+    </div>
+    <footer class="footer-fixed" id="footer">
         &copy 2024 CIUBUC FOTO & VIDEO. Toate drepturile rezervate.
     </footer>
     </main>

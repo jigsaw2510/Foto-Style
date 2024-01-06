@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Foto Foto Servicii Editare Foto si Produse</title>
+    <title>Despre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
             padding: 0;
         }
 		body, html {
-          height: 100%;
+          min-height: 100%;
         }
         .bg {
           /* The image used */
@@ -31,13 +31,12 @@
             font-family: 'Roboto', sans-serif;
         }
         h1 {
-            font-weight: bold;
+            font-weight: strong;
             padding: 10% 5%;
             text-align: left;
-            font-size: 0.8rem;
-            letter-spacing: 0.8px;
+            font-size: 1.2em;
             line-height: 25px;
-            width: 70%;
+            width: 60%;
             margin: 0 auto;
             }
         .topnav {
@@ -113,13 +112,22 @@
         section p {
             margin-bottom: 10px;
         }
-        .footer {
+        .footer-fixed {
+            background: #616161;
             text-align: center;
+            color: white;
+            margin-top: 20px;
             position : absolute;
+            padding: 10px 0;
             bottom : 0;
-            height : 40px;
-            margin-top : 40px;
             width: 100%;
+        }
+        .footer-relative {
+            background: #616161;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
         }
         @media (max-width: 800px) {
             .flex-container {
@@ -141,7 +149,6 @@
             width: 85%;
             margin: 0 auto;
           }
-
         }
           /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
         @media screen and (max-width: 600px) {
@@ -172,10 +179,12 @@
           .topnav.responsive {
             position: fixed;
             width: 100%;
+            height: 100%;
             left: 0;
             top: 0;
             margin: 0;
             padding: 0;
+            background-color: rgba(0, 0, 0, 0.8);
             }
           .topnav.responsive a.icon {
             position: absolute;
@@ -204,11 +213,11 @@
       </a>
     </div>
     <h1>   
-            Bun venit! Sunt Marian, un fotograf și videograf profesionist cu o bogată experiență de peste 20 de ani în acest domeniu fascinant. Cu pasiunea mea pentru capturarea momentelor speciale și talentul în editarea foto-video, am oferit servicii personalizate și de calitate clienților mei la diverse evenimente. <br>
-            Serviciile mele nu se rezumă doar la capturarea unor cadre perfecte; aduc și o atenție deosebită procesului de editare, asigurându-mă că fiecare imagine și clip video reflectă autenticitatea și frumusețea evenimentului sau subiectului. Îmi place să lucrez îndeaproape cu clienții pentru a realiza produse foto-video care să depășească așteptările și să rămână amintiri de preț. <br>
+            Bun venit! Sunt Marian, un fotograf și videograf profesionist cu o bogată experiență de peste 20 de ani în acest domeniu fascinant. Cu pasiunea mea pentru capturarea momentelor speciale și talentul în editarea foto-video, am oferit servicii personalizate și de calitate clienților mei la diverse evenimente. <br><br>
+            Serviciile mele nu se rezumă doar la capturarea unor cadre perfecte; aduc și o atenție deosebită procesului de editare, asigurându-mă că fiecare imagine și clip video reflectă autenticitatea și frumusețea evenimentului sau subiectului. Îmi place să lucrez îndeaproape cu clienții pentru a realiza produse foto-video care să depășească așteptările și să rămână amintiri de preț. <br><br>
             Cu fiecare proiect, mă angajez să ofer o experiență profesionistă, punând la dispoziție nu doar servicii, ci și o viziune artistică și dedicare pentru fiecare detaliu. Abia aștept să colaborăm și să transformăm împreună momentele importante în amintiri durabile.
     </h1>
-    <footer class="footer">
+    <footer class="footer-fixed" id="footer">
         &copy 2024 CIUBUC FOTO & VIDEO. Toate drepturile rezervate.
     </footer>
     </main>
