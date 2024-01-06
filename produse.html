@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icons8-camera-3d-fluency-32.png">
     <title>Produsele noastre</title>
     <style type="text/css">
         * {
@@ -26,6 +27,12 @@
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
+
+          /* Adjust background properties for smaller screens (mobile) */
+          @media (max-width: 800px) {
+            background-size: contain; /* or auto, or any other value that works for your design */
+            background-repeat: repeat;
+          }
         }
         main {
             font-family: 'Roboto', sans-serif;
@@ -147,16 +154,19 @@
             max-width: 100%;
           }
         }
-        img {
+        .row img {
             max-width: 80%;
-            border: 1px solid #03A9F4;
-            border-radius: 5px;
+            border: 3px solid darkgray;
         }
-        img:hover {
-            background-color: #81D4FA;
+        .row img:hover {
+            transition: transform 1s ease;
+            transform: scale(1.05);
         }
-        img, p {
-            padding: 5px;
+        .row p {
+            padding: 10px;
+        }
+        section p {
+            padding: 10px;
         }
         p {
             margin-bottom: 30px;
