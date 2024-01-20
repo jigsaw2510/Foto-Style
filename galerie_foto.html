@@ -3,15 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Galerie Foto</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="icons8-camera-3d-fluency-32.png">
-    <title>Servicii</title>
     <style type="text/css">
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body, html {
           min-height: 100%;
@@ -31,7 +32,6 @@
         main {
             font-family: 'Roboto', sans-serif;
         }
-
         /* TOP NAV STYLE START */
 
         /* Add a black background color to the top navigation */
@@ -175,55 +175,71 @@
         }
 
         /* TOP NAV STYLE END */
-        
+
         h1 {
-            font-weight: strong;
-            text-align: center;
-            font-size: 1.5em;
-            line-height: 25px;
-            width: 60%;
-            margin: 80px auto 20px auto;
-            padding: 20px 0;
-            }
-        video {
-            width: 60%;
+          margin-top: 80px;
+          text-align: center;
+          width: 100%;
         }
-        video:hover {
-            cursor: pointer;
-        }
-        .flex-container {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          margin: 20px;
-        }
+
+        /* RESPONSIVE IMAGE GALLERY START */
+
         .row {
           display: flex;
-          flex-direction: row;
-          text-align: center;
           flex-wrap: wrap;
-          line-height: 20px;
-          justify-content: center;
-          align-items: center;
+          margin-top: 20px;
+          padding: 1%;
         }
-        .column-2 {
-          flex: 50%;
-          max-width: 50%;
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+          flex: 20%;
+          max-width: 20%;
         }
-        
-        section {
-            margin-top: 200px;
+
+        .column img {
+          vertical-align: middle;
+          width: 100%;
         }
-        section h3 {
-            padding: 10px;
-            color: #03A9F4;
-            margin-top: 20px;
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media (max-width: 800px) {
+          .column {
+            flex: 50%;
+            max-width: 50%;
+          }
         }
-        section p {
-            margin-bottom: 10px;
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          .column {
+            flex: 100%;
+            max-width: 100%;
+          }
         }
+
+        /* RESPONSIVE IMAGE GALLERY END */
+
+        /* IMAGE HOVER EFFECT START */
+
+        .image-box {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        .image-box img {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+
+        .image-box:hover img {
+            transform: scale(1.1);
+        }
+
+        /* IMAGE HOVER EFFECT END */
+
+        /* FOOTER STYLE START */
+
         .footer-fixed {
             background: #616161;
             text-align: center;
@@ -241,38 +257,15 @@
             color: white;
             margin-top: 20px;
         }
-        @media (max-width: 800px) {
-            .flex-container {
-                flex-direction: column;
-                height: auto;
-                position: relative;
-            }
-            section {
-                margin-top: 100px;
-            }
-        }
-        @media (max-width: 800px) {
-          h1 {
-            font-weight: bold;
-            padding: 5% 5%;
-            text-align: center;
-            font-size: 0.8em;
-            letter-spacing: 0.8px;
-            width: 85%;
-            margin: 60px auto 10px auto;
-          }
-          video {
-            width: 90%;
-          }
-        }
+
+        /* FOOTER STYLE END */
     </style>
 </head>
 <body class="bg">
-    <!-- Main Content -->
     <main>
     <!-- Header -->
     <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html" >Home</a>
       <a href="produse.html">Produse</a>
       <a href="servicii.html">Servicii</a>
       <div class="dropdown">
@@ -285,19 +278,98 @@
         </div>
       </div>
       <a href="despre.html">Despre</a>
-      <a href="contact.html" >Contact</a>
+      <a href="contact.html" class="active">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      <!-- The above code &#9776 is the unicode for creating the menu icon -->
     </div>
-    <h1>Oferta nunti si botezuri</h1>
+    <h1>
+      Galerie Foto
+    </h1>
     <div class="row">
+      <div class="column">
+        <div class="image-box">
+          <img src="galerie_foto/nunta3.jpeg">
+        </div>
+        <div class="image-box">
+          <img src="galerie_foto/nunta7.jpeg">
+        </div>
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <img src="galerie_foto/nunta1.jpeg">
+        </div>
+        <div class="image-box">
+          <img src="galerie_foto/nunta4.jpeg">
+        </div>
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <img src="galerie_foto/nunta5.jpeg">
+        </div>
+        <div class="image-box">
+          <img src="galerie_foto/nunta6.jpeg">
+        </div>
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <img src="galerie_foto/nunta2.jpeg">
+        </div>
+        <div class="image-box">
+          <img src="galerie_foto/nunta8.jpeg">
+        </div>
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <img src="galerie_foto/nunta9.jpeg">
+        </div>
+        <div class="image-box">
+          <img src="galerie_foto/nunta10.jpeg">
+        </div>
+      </div> 
     </div>
-    <!-- Hero -->
-    <footer class="footer-fixed" id="footer">
+    <footer class="footer-relative" id="footer">
         &copy 2024 CIUBUC FOTO & VIDEO. Toate drepturile rezervate.
     </footer>
     </main>
 </body>
-    <script src="script.js">
-        
+    <script>
+
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+
+      // Debounce function to limit the rate at which a function is called
+          function debounce(func, delay) {
+            let timeoutId;
+            return function() {
+              clearTimeout(timeoutId);
+              timeoutId = setTimeout(func, delay);
+            };
+          }
+          
+      // JavaScript to change the class based on content height and window height
+          function adjustClass() {
+            var footer = document.getElementById("footer");
+            var contentHeight = document.body.clientHeight; // Height of the content
+            var windowHeight = window.innerHeight; // Height of the window
+
+            if (contentHeight < windowHeight) {
+              footer.className = "footer-fixed";
+            } else {
+              footer.className = "footer-relative";
+            }
+          }
+
+          // Initial adjustment on page load
+          adjustClass();
+
+          // Event listener for window resize with debounce
+          window.addEventListener("resize", debounce(adjustClass, 250)); // Adjust the delay as needed
     </script>
 </html>
